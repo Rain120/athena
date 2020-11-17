@@ -2,13 +2,13 @@
 
 这是一些对你使用 `Slate` 有用的资源。
 
-## 类库
+## 一些有帮助的类库
 
 这些库在使用 `Slate` 进行开发时很有帮助:
 
 - [`is-hotkey`](https://github.com/ianstormtaylor/is-hotkey) 是一个简单的方式去检查当你按键的时候， `onKeyDown` 事件是否应该被激活，并且会自动地为你处理像是 <kbd>cmd</kbd> 还是 <kbd>ctrl</kbd> 这样的跨平台问题。
 
-## 产品
+## 使用 Slate 的产品
 
 这些产品使用了 `Slate`，它们可能会带你给一些灵感。:
 
@@ -30,7 +30,7 @@
 - [Yuque](https://www.yuque.com/)
 - [Thoughts](https://thoughts.teambition.com)
 
-## 编辑器
+## 使用 Slate 的编辑器
 
 这些预先打包的编辑器是基于 `Slate` 构建的，它们可以帮助你明白如何组织自己的代码结构:
 

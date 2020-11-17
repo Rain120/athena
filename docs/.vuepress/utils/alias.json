@@ -6,7 +6,7 @@
 
 	"api ----- start": "------------------------",
 	"api": "apis",
-	"refs": "引用",
+	"refs": "refs",
 	"locations": "位置",
 	"nodes": "节点",
 	"transforms": "转换",

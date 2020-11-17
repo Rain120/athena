@@ -1,4 +1,4 @@
-# Node
+# 节点(Node)
 
 The `Node` union type represents all of the different types of nodes that occur in a Slate document tree. 
 

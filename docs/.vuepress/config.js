@@ -80,7 +80,7 @@ module.exports = {
 	extraWatchFiles: [
     '.vuepress/nav/zh.js',
     '.vuepress/config.js',
-		'.vuepress/utils/alias.json',
+		'.vuepress/utils/*',
 		'zh/*'
   ],
   // 主题配置
@@ -138,7 +138,6 @@ module.exports = {
   },
   plugins
 };
-
 function getSlateSidebar() {
   return sortable({
 		nav: 'slate',
@@ -164,10 +163,8 @@ function getSlateSidebar() {
 				priority: 30,
 			}
 		],
-		collapsableList: [
-			'Introduction',
-			'Summary',
-		]
+		noTitleList: ['api', 'walkthroughs', 'concepts', 'libraries', 'general'],
+		collapsableList: ['Introduction', 'Summary',]
 	});
 }
 

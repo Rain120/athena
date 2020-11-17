@@ -2,6 +2,8 @@
 
 This sub-library contains the React-specific logic for Slate.
 
+ `Slate` 在 `React` 的特殊逻辑。
+
 ## Components
 
 React components for rendering Slate editors

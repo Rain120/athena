@@ -3,6 +3,7 @@
 ::: tip
 距今 **(2020-11-15)** 为止, `Slate` 版本为 `v0.59.0`
 
+特别感谢翻译 [0.57.1](https://github.com/loveloki/slate-docs-cn) `loveloki` 同学
 :::
 
 [Slate](http://slatejs.org) 是一个 **完全** 可定制的富文本编辑器框架。

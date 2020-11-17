@@ -2,7 +2,7 @@
  * @Author: Rainy [https://github.com/rain120]
  * @Date: 2020-11-14 20:53:53
  * @LastEditors: Rainy
- * @LastEditTime: 2020-11-15 01:39:23
+ * @LastEditTime: 2020-11-15 17:21:27
  */
 
 const fs = require('fs');
@@ -23,6 +23,7 @@ function sortable({
 	// INFO: priority 0 - 10, 11 - 20, 21 - 30, 默认是 11
 	// [{ label: '', priority: 10 }]
 	sortList = [],
+	noTitleList = [],
 	collapsableList = []
 }) {
 	function findObj(obj) {
@@ -33,6 +34,7 @@ function sortable({
 		path,
 		lang,
 		collapsableList,
+		noTitleList,
 	}).filter(Boolean).sort((front, end) => {
 		if (!sortList.length) {
 			return;
@@ -47,7 +49,8 @@ function createSidebar({
 	nav,
 	path = filePath,
 	lang = language,
-	collapsableList = []
+	collapsableList = [],
+	noTitleList = []
 }) {
 	const located = `${path}/${nav}`;
 	const prefixPath = located.split(filePath)[1]
@@ -74,26 +77,31 @@ function createSidebar({
           // fileName = docAlias ? [docPath, docAlias] : docPath;
 					children.push(docPath);
         } else {
-					// INFO: 文件夹递归
-					children = createSidebar({nav: file, path: located});
-				}
-				const title = (docAlias ? docAlias : file || '').replace(/\.md$/, '');
-				const key = removeMd(file);
-				return {
-					title,
-					key,
-					collapsable,
-					children: (children || [])
-						.filter(_ =>
-							Boolean && Array.isArray(_)
-								? (_[0] || '').includes(key)
-								: typeof _ === 'string'
-									? _.includes(key)
-									: !_.children.includes(key)
-
-						)
-				};
-      });
+          // INFO: 文件夹递归
+          children = createSidebar({nav: file, path: located});
+        }
+        const title = (docAlias ? docAlias : file || '').replace(/\.md$/, '');
+        const key = removeMd(file);
+        return {
+          title,
+          key,
+          collapsable,
+          children: (children || [])
+            .filter(_ =>
+              Boolean && Array.isArray(_)
+                ? (_[0] || '').includes(key)
+                : typeof _ === 'string'
+                  ? _.includes(key)
+                  : !_.children.includes(key)
+            ).map(_ => {
+              if (noTitleList.filter(Boolean).includes(key)) {
+                _.title = '';
+                _.collapsable = false;
+              }
+              return _;
+            }),
+        };
+	});
 }
 
 module.exports = {

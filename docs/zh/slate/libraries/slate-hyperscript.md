@@ -1,3 +1,3 @@
 # Slate Hyperscript
 
-This package contains a hyperscript helper for creating Slate documents with JSX!
+帮助你使用 `JSX` 编写 `Slate` 文档的 `hyperscript` 工具！
