@@ -1,5 +1,6 @@
 {
 	"guide": "介绍",
+	"SlateStart": "关于本文档",
 	"Introduction": "介绍",
 	"Summary": "摘要",
 	"Contributing": "贡献",
@@ -31,12 +32,12 @@
 	"walkthroughs ----- start": "------------------------",
 	"walkthroughs": "实战演练",
 	"01-installing-slate": "安装 Slate",
-	"02-adding-event-handlers": "添加事件处理程序",
+	"02-adding-event-handlers": "添加事件处理器",
 	"03-defining-custom-elements": "自定义 Block 节点",
-	"04-applying-custom-formatting": "应用自定义格式",
-	"05-executing-commands": "使用命令",
+	"04-applying-custom-formatting": "自定义样式",
+	"05-executing-commands": "执行命令",
 	"06-saving-to-a-database": "保存到数据库",
-	"XX-using-the-bundled-source": "使用捆绑源",
+	"XX-using-the-bundled-source": "使用打包后的版本",
 	"walkthroughs ----- end": "------------------------",
 
 	"general ----- start": "------------------------",
@@ -45,5 +46,10 @@
 	"resources": "资源",
 	"general ----- end": "------------------------",
 
-	"libraries": "Slate 其他类库"
+	"libraries": "Slate 其他类库",
+
+	"note ----- start": "------------------------",
+	"note": "学习(使用)心得",
+	"design-mind": "Slate 设计思路",
+	"note ----- end": "------------------------"
 }

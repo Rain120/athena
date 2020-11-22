@@ -5,12 +5,12 @@
 ## 实战演练
 
 - [安装 Slate](./walkthroughs/01-installing-slate.md)
-- [添加事件处理程序](./walkthroughs/02-adding-event-handlers.md)
+- [添加事件处理器](./walkthroughs/02-adding-event-handlers.md)
 - [自定义 Block 节点](./walkthroughs/03-defining-custom-elements.md)
-- [应用自定义格式](./walkthroughs/04-applying-custom-formatting.md)
-- [使用命令](./walkthroughs/05-executing-commands.md)
+- [自定义样式](./walkthroughs/04-applying-custom-formatting.md)
+- [执行命令](./walkthroughs/05-executing-commands.md)
 - [保存到数据库](./walkthroughs/06-saving-to-a-database.md)
-- [使用捆绑源](./walkthroughs/XX-using-the-bundled-source.md)
+- [使用打包后的版本](./walkthroughs/XX-using-the-bundled-source.md)
 
 ## 概念
 

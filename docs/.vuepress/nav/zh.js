@@ -1,7 +1,7 @@
 module.exports = [
   {
 		text: 'Slate 中文文档',
-		link: '/zh/slate/Introduction'
+		link: '/zh/slate/SlateStart'
   },
   {
     text: 'Sharedb 中文文档',

@@ -25,8 +25,6 @@ Welcome to Here for the Chinese documentation.
 
 - 留下一些 **学习笔记**, 仅供大家参考
 
-<!-- - 学习 `Slate`, 上个前端 **清华** 吧(戏称 **富文本** 是前端清华)。 -->
-
 ## 🎮 TL;DR
 
 ⌨️ To be Continue...
@@ -39,7 +37,7 @@ We welcome all contributions. You can submit any ideas as [pull requests](https:
 
 ## 🔗 Links
 
-⌨️ To be Continue...
+[Live Link](https://rain120.github.io/athena/)
 
 ## 👨‍🏭 Author
 

@@ -1,7 +1,6 @@
 const path = require('path');
 const plugins = require('./utils/plugins');
 const slugify = require('@vuepress/shared-utils').slugify
-const { sortable } = require('./utils/navSidebar');
 
 const SPECIAL_HEADINGS = {
   '!': 'exclamation',
@@ -101,7 +100,7 @@ module.exports = {
 				nav: require('./nav/zh'),
 				sidebar: {
 					'/zh/guide/': [''],
-					'/zh/slate/': getSlateSidebar(),
+					'/zh/slate/': require('./sidebar/slate')(),
 					'/zh/sharedb/': ['']
 				}
 			}
@@ -138,33 +137,3 @@ module.exports = {
   },
   plugins
 };
-function getSlateSidebar() {
-  return sortable({
-		nav: 'slate',
-		sortList: [
-			{
-				label: 'Introduction',
-				priority: 0,
-			},
-			{
-				label: 'Summary',
-				priority: 1,
-			},
-			{
-				label: 'walkthroughs',
-				priority: 2,
-			},
-			{
-				label: 'Contributing',
-				priority: 25,
-			},
-			{
-				label: 'general',
-				priority: 30,
-			}
-		],
-		noTitleList: ['api', 'walkthroughs', 'concepts', 'libraries', 'general'],
-		collapsableList: ['Introduction', 'Summary',]
-	});
-}
-

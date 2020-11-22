@@ -20,7 +20,7 @@ Editor.insertBreak(editor)
 
 > 🤖 命令的概念基本上来自于 `DOM` 内检的 [`execCommand`](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand) `API`。然而 `Slate` 定义了自己的简单（并且可扩展）的 `API` ，因为 `DOM` 版本的`API` 表现过于不一致 `(opinionated and inconsistent)`。
 
-因此，Slate 将每一个命令转换为一系列的低级操作 ([operations](./05-operations.md))，这些操作用来产生一个新的值。这就是协同编辑可以实现的原因。同时你不用担心这些问题，因为它是自动完成的。
+因此，Slate 将每一个命令转换为一系列的底层操作 ([operations](./05-operations.md))，这些操作用来产生一个新的值。这就是协同编辑可以实现的原因。同时你不用担心这些问题，因为它是自动完成的。
 
 ## 自定义命令(Custom Commands)
 
