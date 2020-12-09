@@ -52,4 +52,4 @@ function getSlateSidebar() {
 	});
 }
 
-module.exports = getSlateSidebar
+module.exports = getSlateSidebar()

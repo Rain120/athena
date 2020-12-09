@@ -1,89 +1,89 @@
-# Contributing
+# 贡献
 
-Want to contribute to Slate? That would be awesome!
+想要为 `Slate` 做贡献？ 那将是真棒！
 
-- [Reporting Bugs](#reporting-bugs)
-- [Asking Questions](#asking-questions)
-- [Submitting Pull Requests](#submitting-pull-requests)
-- [Repository Setup](#repository-setup)
-- [Running Examples](#running-examples)
-- [Running Tests](#running-tests)
-- [Testing Input Methods](#testing-input-methods)
-- [Publishing Releases](#publishing-releases)
+- [提出Bugs](#提出Bugs)
+- [提出问题](#提出问题)
+- [提交PR](#提交PR)
+- [仓库设置](#仓库设置)
+- [启动示例服务器](#启动示例服务器)
+- [运行测试用例](#运行测试用例)
+- [测试方式](#测试方式)
+- [发布](#发布)
 
-## Reporting Bugs
+## 提出Bugs
 
-If you run into any weird behavior while using Slate, feel free to open a new issue in this repository! Please run a **search before opening** a new issue, to make sure that someone else hasn't already reported or solved the bug you've found.
+如果您在使用`Slate`时遇到任何奇怪的行为，请随时在此仓库中提出一个新 `issue`！ 请先对这个`issue` **进行搜索**，然后再新建 `issue`，以确保尚未有人报告或解决您发现的错误。
 
-Any issue you open must include:
+每一个 `issue` 都必须包括:
 
-- A [JSFiddle](https://jsfiddle.net/01pLxfzu/) that reproduces the bug with a minimal setup.
-- A GIF showing the issue in action. (Using something like [RecordIt](http://recordit.co/).)
-- A clear explanation of what the issue is.
+- 一个必须能复现该错误的 [JSFiddle](https://jsfiddle.net/01pLxfzu/) 新页面。
+- 显示问题的动图。(可以使用 [RecordIt](http://recordit.co/) 录制)
+- 对问题的明确解释。
 
-Here's a [JSFiddle template for Slate](https://jsfiddle.net/01pLxfzu/) to get you started:
+这里有一个[JSFiddle 模板](https://jsfiddle.net/01pLxfzu/)方便你更快的开始写你的`Demo`:
 
 [![](./images/jsfiddle.png)](https://jsfiddle.net/01pLxfzu/)
 
-## Asking Questions
+## 提出问题
 
-We've also got a [Slate Slack team](https://slate-slack.herokuapp.com) where you can ask questions and get answers from other people using Slate:
+我们还有一个 [Slate Slack团队](https://slate-slack.herokuapp.com) ，您可以在其中提问并获得其他使用 `Slate` 的用户们的答案:
 
-[![](./images/slack.png)](https://slate-slack.herokuapp.com)
+![](./images/slack.png)
 
-Please use the Slack instead of asking questions in issues, since we want to reserve issues for keeping track of bugs and features. We close questions in issues so that maintaining the project isn't overwhelming.
+请使用`Slack` 来代替想我们提 `issue`，因为我们希望保留问题以跟踪错误和功能。 我们通过关闭提出的`issue`来维护项目，这样就不会太困难。
 
-## Submitting Pull Requests
+## 提交PR
 
-All pull requests are super welcomed and greatly appreciated! Issues in need of a solution are marked with a [`♥ help`](https://github.com/ianstormtaylor/slate/issues?q=is%3Aissue+is%3Aopen+label%3A%22%E2%99%A5+help%22) label if you're looking for somewhere to start.
+我们非常欢迎和感激每一个 `PR`。如果你的 `issue` 一开始就是想获取帮助, 请记得用 [`♥ help`](https://github.com/ianstormtaylor/slate/issues?q=is%3Aissue+is%3Aopen+label%3A%22%E2%99%A5+help%22) 来标记它。
 
-Please include tests and docs with every pull request!
+请在每个请求请求中包含测试和文档！
 
-## Repository Setup
+## 仓库设置
 
-The slate repository is a monorepo that is managed with [lerna](https://github.com/lerna/lerna). Unlike more traditional repositories, this means that the repository must be built in order for tests, linting, or other common development activities to function as expected.
+`Slate` 是由 [lerna](https://github.com/lerna/lerna) 管理的`monorepo`。 与更传统的存储库不同，这意味着必须构建存储库才能使测试，整理或其他常见开发活动按预期运行。
 
-To run the build, you need to have the Slate repository cloned to your computer. After that, you need to `cd` into the directory where you cloned it, and install the dependencies with `yarn` and build the monorepo:
+要运行构建，您需要将`Slate`存储库克隆到您的计算机上。 之后，您需要`cd`到克隆它的目录中，并使用`yarn`安装依赖项并构建`monorepo`：
 
 ```
 yarn install
 yarn build
 ```
 
-## Running Examples
+## 启动示例服务器
 
-To run the examples, start by building the monorepo as described in the [Repository Setup](#repository-setup) section.
+要运行示例，首先构建 [存储库设置](http://localhost:9527/athena/zh/slate/Contributing.html#repository-setup) 部分中描述的`monorepo`。
 
-Then you can start the examples server with:
+然后，您可以使用以下命令启动示例服务器:
 
 ```
 yarn start
 ```
 
-## Running Tests
+## 运行测试用例
 
-To run the tests, start by building the monorepo as described in the [Repository Setup](#repository-setup) section.
+要运行测试，首先构建 [存储库设置](#repository-setup) 部分中描述的`monorepo`。
 
-Then you can rerun the tests with:
+然后你可以重新运行测试
 
 ```
 yarn test
 ```
 
-If you need to debug something, you can add a `debugger` line to the source, and then run `yarn test:inspect`.
+如果需要调试某些东西，可以在源代码中某一行添加调试标记，然后运行 `yarn test：inspect`。
 
-If you only want to run a specific test or tests, you can run `yarn test --fgrep="slate-react rendering"` flag which will filter the tests being run by grepping for the string in each test. (This is a Mocha flag that gets passed through.)
+如果只想运行一个或多个特定测试，则可以运行 `yarn test --fgrep="slate-react rendering"` 标志，该标志将通过`grepping`来对每个测试中的测试实例进行过滤。(通过 `Mocha` 的标记来区分)
 
-## Testing Input Methods
+## 测试方式
 
-[Here's a helpful page](https://github.com/Microsoft/vscode/wiki/IME-Test) detailing how to test various input scenarios on Windows, Mac and Linux.
+这个[页面](https://github.com/Microsoft/vscode/wiki/IME-Test)详细描述了介绍了如何在`Windows`、`Mac`和Linux上测试各种输入场景。
 
-## Publishing Releases
+## 发布
 
-Since we use [Lerna](https://lerna.js.org) to manage the Slate packages this is fairly easy, just run:
+由于我们使用 [Lerna](https://lerna.js.org) 来管理 `Slate` 软件包，因此相当简单，只需运行
 
 ```js
 yarn release
 ```
 
-And follow the prompts Lerna gives you.
+`Lerna` 给你运行的提示。

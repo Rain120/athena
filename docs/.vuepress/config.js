@@ -100,7 +100,7 @@ module.exports = {
 				nav: require('./nav/zh'),
 				sidebar: {
 					'/zh/guide/': [''],
-					'/zh/slate/': require('./sidebar/slate')(),
+					'/zh/slate/': require('./sidebar/slate'),
 					'/zh/sharedb/': ['']
 				}
 			}
