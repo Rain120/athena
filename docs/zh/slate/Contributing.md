@@ -27,7 +27,7 @@
 
 ## 提出问题
 
-我们还有一个 [Slate Slack团队](https://slate-slack.herokuapp.com) ，您可以在其中提问并获得其他使用 `Slate` 的用户们的答案:
+我们还有一个 [Slate Slack 组](https://slate-slack.herokuapp.com) ，您可以在其中提问并获得其他使用 `Slate` 的用户们的答案:
 
 ![](./images/slack.png)
 
@@ -52,7 +52,7 @@ yarn build
 
 ## 启动示例服务器
 
-要运行示例，首先构建 [存储库设置](http://localhost:9527/athena/zh/slate/Contributing.html#repository-setup) 部分中描述的`monorepo`。
+要运行示例，首先构建 [存储库设置](http://localhost:9527/athena/zh/slate/Contributing.html#repository-setup) 中的`monorepo`。
 
 然后，您可以使用以下命令启动示例服务器:
 
@@ -62,7 +62,7 @@ yarn start
 
 ## 运行测试用例
 
-要运行测试，首先构建 [存储库设置](#repository-setup) 部分中描述的`monorepo`。
+要运行测试，首先构建 [存储库设置](#repository-setup) 中的`monorepo` 。
 
 然后你可以重新运行测试
 

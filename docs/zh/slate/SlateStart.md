@@ -6,7 +6,7 @@
 
 ### 文档地址
 
-[Github: Slate](https://github.com/ianstormtaylor)
+[Github: Slate](https://github.com/ianstormtaylor/slate)
 
 [Slate 官方文档](http://slatejs.org)
 
