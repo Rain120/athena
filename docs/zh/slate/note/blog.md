@@ -12,8 +12,7 @@
 
 - [Slate.js简介](https://zhuanlan.zhihu.com/p/324209467)
 
-- [HTML 中的富文本](https://zhuanlan.zhihu.com/p/324332585)
-
+  - [HTML 中的富文本](https://zhuanlan.zhihu.com/p/324332585)
   - [Slate.js 中的富文本](https://zhuanlan.zhihu.com/p/324376115)
 
   - 节点寻址
