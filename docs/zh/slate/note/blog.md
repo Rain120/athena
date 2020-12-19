@@ -15,11 +15,11 @@
   - [HTML 中的富文本](https://zhuanlan.zhihu.com/p/324332585)
   - [Slate.js 中的富文本](https://zhuanlan.zhihu.com/p/324376115)
 
-  - 节点寻址
+  - [节点寻址](https://zhuanlan.zhihu.com/p/336878823)
 
-  - 附录 - 不可变数据
+  - [附录 - 不可变数据](https://zhuanlan.zhihu.com/p/336901066)
 
-  - 附录 - Memorize
+  - [附录 - Memorize](https://zhuanlan.zhihu.com/p/337929787)
 
 - Slate.js 是怎么工作的
 
