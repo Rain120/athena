@@ -4,7 +4,7 @@ Transforms are helper functions operating on the document. They can be used in d
 
 `Transforms` 是对文档进行操作的辅助函数。 它们可用于定义自己的命令。
 
-### 节点转换
+### 节点转换(Node transforms)
 
 Transforms that operate on nodes.
 
@@ -14,7 +14,7 @@ Transforms that operate on nodes.
 
 All transforms listed below support a parameter `options`. This includes options specific to the transform, and general `NodeOptions` to specify the place in the document that the transform is applied to. 
 
-下面列出的所有 `transform` 方法都支持的参数选项。 这包括特定于 `transform` 的选项，以及用于指定要在其中应用转换的文档中位置的常规 `NodeOptions`。
+下面列出的所有 `transform` 方法都支持的参数选项。 这包括特定于 `transform` 的选项，以及用于指定转换应用于文档中的位置的常规 `NodeOptions`。
 
 ```typescript
 interface NodeOptions {
@@ -29,7 +29,7 @@ interface NodeOptions {
 
 Insert `nodes` at the specified location in the document.  If no location is specified, insert at the current selection. If there is no selection, insert at the end of the document.
 
-将节点插入文档中的指定位置。 如果未指定位置，请在当前选择处插入。 如果没有选择，请在文档末尾插入。
+将节点插入文档中的指定位置。 如果未指定位置，请在当前选择处插入。 如果没有 `selection` ，请在文档末尾插入。
 
 参数选项如下
 
@@ -44,7 +44,7 @@ NodeOptions & {
 
 Remove nodes at the specified location in the document. If no location is specified, remove the nodes in the selection. 
 
-删除文档中指定位置的节点。 如果未指定位置，删除选择中的节点。
+移除文档中指定位置的节点。 如果未指定位置，就移除在 `selection` 中的节点
 
 参数选项如下
 
@@ -58,7 +58,7 @@ NodeOptions & {
 
 Merge a node at the specified location with the previous node at the same depth. If no location is specified, use the selection. Resulting empty container nodes are removed.
 
-将位于指定位置的节点与位于相同深度的前一个节点合并。如果没有指定位置，则使用选择。产生的空容器节点被删除。
+将位于指定位置的节点与位于相同深度的前一个节点合并。如果没有指定位置，则使用选择。产生的空容器节点被移除。
 
 参数选项如下
 
@@ -166,13 +166,13 @@ NodeOptions & {to: Path}
 
 Transforms that operate on the document's selection.
 
-对文档选择进行操作的转换。
+对文档选择  `selection` 进行操作的转换。
 
 #### `Transforms.collapse(editor: Editor, options?)`
 
 Collapse the selection to a single point.
 
-将选区折叠为单个点。
+将选区  `selection` 折叠为单个点。
 
 参数选项如下
 
@@ -186,19 +186,19 @@ Collapse the selection to a single point.
 
 Set the selection to a new value specified by `target`.
 
-将选区设置为target指定的新值。
+将选区 `selection`设置为`target`指定的新值。
 
 #### `Transforms.deselect(editor: Editor)`
 
 Unset the selection.
 
-未设置的选区。
+未设置的选区 `selection`。
 
 #### `Transforms.move(editor: Editor, options?)`
 
 Move the selection's point forward or backward.
 
-向前或向后移动选区的点。
+向前或向后移动选区 `selection` 的点。
 
 参数选项如下
 
@@ -215,7 +215,7 @@ Move the selection's point forward or backward.
 
 Set new properties on one of the selection's points.
 
-在选区的某个点上设置新属性。
+在选区 `selection` 的某个点上设置新属性。
 
 参数选项如下
 
@@ -229,19 +229,19 @@ Set new properties on one of the selection's points.
 
 Set new properties on the selection.
 
-在所选内容上设置新属性。
+在当前选区 `selection` 上设置新属性。
 
 ## 文本转换(Text transforms)
 
 Transforms that operate on text.
 
-转换文本上的操作。
+对文本 `(Text)` 进行操作的转换。
 
 #### `Transforms.delete(editor: Editor, options?)`
 
 Delete text in the document.
 
-删除文档中的文本。
+移除文档中的文本。
 
 参数选项如下
 ```ts
@@ -259,7 +259,7 @@ Delete text in the document.
 
 Insert of fragment of nodes at the specified location in the document. If no location is specified, insert at the current selection.
 
-在文档中的指定位置插入节点片段。如果没有指定位置，则在当前选区的位置插入。
+在文档中的指定位置插入节点片段。如果没有指定位置，则在当前选区 `(selection)`的位置插入。
 
 参数选项如下
 ```ts
@@ -271,6 +271,8 @@ Insert of fragment of nodes at the specified location in the document. If no loc
 ```
 
 #### `Transforms.insertText(editor: Editor, text: string, options?)`
+
+在文档的指定位置插入文本字符串。如果未指定位置，插入当前选区 `(selection)`。
 
 参数选项如下
 ```ts
@@ -286,4 +288,4 @@ Insert of fragment of nodes at the specified location in the document. If no loc
 
 Transform the `editor` by an `operation`.
 
-将一个操作转换成 `Editor`
+将一个操作 `operation` 转换成 `Editor`

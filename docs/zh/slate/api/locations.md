@@ -19,7 +19,7 @@ Check if a value implements the `Location` interface.
 
 `Path` arrays are a list of indexes that describe a node's exact position in a Slate node tree. Although they are usually relative to the root `Editor` object, they can be relative to any `Node` object.
 
-`Path` (路径)数组是描述节点在板节点树中的确切位置的索引列表。尽管它们通常相对于根 `Editor` 对象，但它们可以相对于任何 `Node` 对象。
+`Path` (路径) 数组是描述节点在板 `Slate` 节点树中的确切位置的索引列表。尽管它们通常相对于根 `Editor` 对象，但它们可以相对于任何 `Node` 对象。
 
 ```typescript
 type Path = number[]
@@ -90,6 +90,8 @@ Transform a `point` by an `op`.
 `Range` objects are a set of points that refer to a specific span of a Slate document. They can define a span inside a single node or they can span across multiple nodes. The editor's `selection` is stored as a range.
 
 `Range` 对象是引用 `Slate` 文档特定范围的一组点。它们可以在单个节点内定义一个范围，也可以跨越多个节点。编辑器的选择存储为一个范围。
+
+**译者 📒**:  [Here](../note/selection-range.md#范围-range) 有关于范围 `(range)`的一些个人学习总结，欢迎一起讨论。
 
 ```typescript
 interface Range {
@@ -177,13 +179,13 @@ Iterate through all the point entries in a `range`.
 
 Get the start point of a `range`
 
-获取范围的起始点
+获取范围 `(range)` 的起始点。
 
 #### `Range.transform(range: Range, op: Operation, options): Range | null`
 
 Transform a `range` by an `op`.
 
-将 `op` 转换成一个范围 `(`range`)`的信息。
+将 `op` 转换成一个范围 `(range)`的信息。
 
 参数选项
 

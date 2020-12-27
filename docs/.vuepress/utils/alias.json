@@ -35,9 +35,9 @@
 	"02-adding-event-handlers": "添加事件处理器",
 	"03-defining-custom-elements": "自定义 Block 节点",
 	"04-applying-custom-formatting": "自定义样式",
-	"05-executing-commands": "执行命令",
+	"05-executing-commands": "使用命令",
 	"06-saving-to-a-database": "保存到数据库",
-	"XX-using-the-bundled-source": "使用打包后的版本",
+	"XX-using-the-bundled-source": "使用 script 标签引入",
 	"walkthroughs ----- end": "------------------------",
 
 	"general ----- start": "------------------------",
@@ -52,6 +52,7 @@
 	"note": "学习(使用)心得",
 	"blog": "博客",
 	"slate-review": "学习回顾",
+	"selection-range": "Selection & Range 学习",
 	"design-mind": "Slate 设计思路",
 	"note ----- end": "------------------------"
 }

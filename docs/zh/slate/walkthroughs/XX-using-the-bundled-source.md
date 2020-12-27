@@ -1,4 +1,4 @@
-# 使用打包后的版本
+# 使用 script 标签引入
 
 对于大多数人来说，你会希望通过 `npm` 安装 `Slate`，在这种情况下，你可以遵循常规的 [安装指南](./01-installing-slate.md)。
 
@@ -6,7 +6,7 @@
 
 要获得 `slate.js` 的副本，可以从 `npm` 下载你想要的指定版本
 
-```
+```sh
 npm install slate@latest
 ```
 
@@ -38,7 +38,7 @@ node_modules/
 <script src="./vendor/slate.js"></script>
 ```
 
-为了让事情更加简单，对于原型制作，你也可以使用 [`unpkg.com`](https://unpkg.com/#/) 分发网络，这使得与捆绑的 npm modules 一起使用更加方便。在这种情况下，你应该像下面这样：
+为了让事情变得更简单，为了快速原型制作，你也可以使用 [`unpkg.com`](https://unpkg.com/#/) 来让与捆绑的 npm modules 一起使用更加方便。在这种情况下，你应该像下面这样:
 
 ```html
 <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
