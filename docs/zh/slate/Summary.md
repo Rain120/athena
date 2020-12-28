@@ -10,7 +10,7 @@
 - [自定义样式](./walkthroughs/04-applying-custom-formatting.md)
 - [执行命令](./walkthroughs/05-executing-commands.md)
 - [保存到数据库](./walkthroughs/06-saving-to-a-database.md)
-- [使用打包后的版本](./walkthroughs/XX-using-the-bundled-source.md)
+- [使用 script 标签引入](./walkthroughs/XX-using-the-bundled-source.md)
 
 ## 概念
 
