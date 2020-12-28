@@ -33,7 +33,7 @@ const containers = [
 module.exports = [
   ['@vuepress/back-to-top'],
   [
-    '@vuepress/google-analytics',
+    '@vuepress/plugin-google-analytics',
     {
       ga: 'G-JX9BEEW7V3'
     }
