@@ -80,7 +80,7 @@ export interface Range {
 
 `Selection` 表示当前用户选中的内容或插入符号的当前位置。
 
-`Slate` 中 `Selection` 的能力则是通过 `Range Interface` 注入的。
+`Slate@0.50+` 中 `Selection` 的能力是通过 `Range Interface` 注入的。
 
 ```ts
 export interface Editor {
@@ -88,8 +88,6 @@ export interface Editor {
   selection: Range | null
 }
 ```
-
-
 
 ![range-example-p-0-1](./images/range-example-p-0-1.svg)
 
