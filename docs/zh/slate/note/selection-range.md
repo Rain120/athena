@@ -1,4 +1,4 @@
-# Selection & Range 学习
+# Selection & Range
 
 ::: tip 关于
 

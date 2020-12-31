@@ -80,3 +80,7 @@
 ## 其他
 
 [富文本编辑器的技术演进 罗龙浩](https://myslide.cn/slides/21863#)
+
+[开源富文本编辑器技术的演进（2020 1024） - pubuzhixing的文章 - 知乎](https://zhuanlan.zhihu.com/p/268366406)
+
+[slate 架构设计分析 - Wendell的文章 - 知乎](https://zhuanlan.zhihu.com/p/262209236)
