@@ -13,6 +13,7 @@
 - [Slate.js简介](https://zhuanlan.zhihu.com/p/324209467)
 
   - [HTML 中的富文本](https://zhuanlan.zhihu.com/p/324332585)
+	
   - [Slate.js 中的富文本](https://zhuanlan.zhihu.com/p/324376115)
 
   - [节点寻址](https://zhuanlan.zhihu.com/p/336878823)
@@ -21,9 +22,9 @@
 
   - [附录 - Memorize](https://zhuanlan.zhihu.com/p/337929787)
 
-- Slate.js 是怎么工作的
+- [Slate.js 是怎么工作的](https://zhuanlan.zhihu.com/p/343799344)
 
-- 大脑 - Controller
+- [大脑 - Controller](https://zhuanlan.zhihu.com/p/343800510)
 
   - 指令系统
 
