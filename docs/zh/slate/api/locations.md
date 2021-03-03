@@ -19,7 +19,7 @@ Check if a value implements the `Location` interface.
 
 `Path` arrays are a list of indexes that describe a node's exact position in a Slate node tree. Although they are usually relative to the root `Editor` object, they can be relative to any `Node` object.
 
-`Path` (路径) 数组是描述节点在板 `Slate` 节点树中的确切位置的索引列表。尽管它们通常相对于根 `Editor` 对象，但它们可以相对于任何 `Node` 对象。
+`Path` (路径) 数组是描述节点在 `Slate` 节点树中的确切位置的索引列表。尽管它们通常相对于根 `Editor` 对象，但它们可以相对于任何 `Node` 对象。
 
 ```typescript
 type Path = number[]
@@ -145,23 +145,22 @@ Check if a `range` is backward, meaning that its anchor point appears *after* it
 
 检查范围是否向后，这意味着它的锚点出现在文档中它的焦点之后。
 
+#### `Range.isForward(range: Range): boolean`
+
+Check if a `range` is forward. This is the opposite of `Range.isBackward` and is provided for legibility.
+
+检查范围是否向前。 这与 `Range.isBackward` 相反，仅供参考。
 #### `Range.isCollapsed(range: Range): boolean`
 
 Check if a `range` is collapsed, meaning that both its anchor and focus points refer to the exact same position in the document.
 
-检查范围是否被折叠，这意味着它的锚点和焦点点在文档中指向完全相同的位置。
+检查范围是否被折叠，这意味着它的锚点和焦点在文档中指向完全相同的位置。
 
 #### `Range.isExpanded(range: Range): boolean`
 
 Check if a `range` is expanded. This is the opposite of `Range.isCollapsed` and is provided for legibility.
 
 检查范围是否展开。 这与 `Range.isCollapsed` 相反，仅供参考。
-
-#### `Range.isForward(range: Range): boolean`
-
-Check if a `range` is forward. This is the opposite of `Range.isBackward` and is provided for legibility.
-
-检查范围是否向前。 这与 `Range.isBackward` 相反，仅供参考。
 
 #### `Range.isRange(value: any): value is Range`
 
