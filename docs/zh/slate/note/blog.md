@@ -26,9 +26,9 @@
 
 - [大脑 - Controller](https://zhuanlan.zhihu.com/p/343800510)
 
-  - 指令系统
+  - [指令系统](https://zhuanlan.zhihu.com/p/343801042)
 
-  - Operation
+  - [Operation](https://zhuanlan.zhihu.com/p/343801406)
 
   - 插件体系
 
