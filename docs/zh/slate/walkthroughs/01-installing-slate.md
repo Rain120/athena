@@ -46,6 +46,25 @@ const App = () => {
 }
 ```
 
+>如果你正在使用TypeScript，你还需要根据TypeScript文档使用ReactEditor来扩展Editor。下面的示例包括了本示例其余部分所需的自定义类型。
+
+```tsx
+// TypeScript 用户添加这一段代码
+import { BaseEditor } from 'slate'
+import { ReactEditor } from 'slate-react'
+
+type CustomElement = { type: 'paragraph'; children: CustomText[] }
+type CustomText = { text: string }
+
+declare module 'slate' {
+  interface CustomTypes {
+    Editor: BaseEditor & ReactEditor
+    Element: CustomElement
+    Text: CustomText
+  }
+}
+```
+
 当然我们没有渲染任何的东西，所以你不会看到任何变化。
 
 接下来我们要使用 `value` 创建一个状态:
