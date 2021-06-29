@@ -5,18 +5,17 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
 #   pull_request:
-#     branches: [ master ]
+#     branches: [ main ]
 
 jobs:
-
   deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout 🛎️
-        uses:  actions/checkout@master
+        uses: actions/checkout@main
 
       - name: Install and Build 🔧
         run: |
