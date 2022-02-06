@@ -1,33 +1,33 @@
 const moment = require('moment');
 
 const containers = [
-	// 你可以多次使用这个插件
-	[
-		'vuepress-plugin-container',
-		{
-			type: 'right',
-			defaultTitle: '',
-		},
-	],
-	[
-		'vuepress-plugin-container',
-		{
-			type: 'theorem',
-			before: info => `<div class="theorem"><p class="title">${info}</p>`,
-			after: '</div>',
-		},
-	],
-	// 这是 VuePress 默认主题使用这个插件的方式
-	[
-		'vuepress-plugin-container',
-		{
-			type: 'tip',
-			defaultTitle: {
-				'/': 'TIP',
-				'/zh/': '提示',
-			},
-		},
-	],
+  // 你可以多次使用这个插件
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'right',
+      defaultTitle: '',
+    },
+  ],
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'theorem',
+      before: info => `<div class="theorem"><p class="title">${info}</p>`,
+      after: '</div>',
+    },
+  ],
+  // 这是 VuePress 默认主题使用这个插件的方式
+  [
+    'vuepress-plugin-container',
+    {
+      type: 'tip',
+      defaultTitle: {
+        '/': 'TIP',
+        '/zh/': '提示',
+      },
+    },
+  ],
 ];
 
 module.exports = [
@@ -88,7 +88,22 @@ module.exports = [
         return moment(timestamp).fromNow()
       }
     }
-	],
+  ],
+  [
+    '@vuepress/plugin-search',
+    {
+      locales: {
+        '/': {
+          placeholder: 'Search',
+        },
+        '/zh/': {
+          placeholder: '搜索',
+        },
+      },
+      // 允许搜索 Frontmatter 中的 `tags`
+      getExtraFields: (page) => page.frontmatter.tags ?? [],
+    },
+  ],
   [
     'vuepress-plugin-mathjax',
     {
@@ -98,5 +113,5 @@ module.exports = [
       },
     },
   ],
-	...containers,
+  ...containers,
 ];

@@ -43,26 +43,26 @@ module.exports = {
   // markdown
   markdown: {
     lineNumbers: true,
-		/**
-		 * 解决一个 "无实质内容的标题导致 permalink 出错" 的问题,
-		 * 目前发现有若干个有点问题的, 如 `!`
-		 *
-		 * @todo: 如果开始有多类似的个例, 可以引入特殊的 "heading anchor" 格式, 并统一处理
-		 *
-		 * 参考 : http://caibaojian.com/vuepress/config/#markdown-slugify
-		 *
-		 * @param {string} heading
-		 * @return {string|*|string}
-		 */
-		slugify: heading => {
-				const originResult = slugify(heading)
+    /**
+     * 解决一个 "无实质内容的标题导致 permalink 出错" 的问题,
+     * 目前发现有若干个有点问题的, 如 `!`
+     *
+     * @todo: 如果开始有多类似的个例, 可以引入特殊的 "heading anchor" 格式, 并统一处理
+     *
+     * 参考 : http://caibaojian.com/vuepress/config/#markdown-slugify
+     *
+     * @param {string} heading
+     * @return {string|*|string}
+     */
+    slugify: heading => {
+      const originResult = slugify(heading)
 
-			const trimmedHeading = (heading || '').trim()
-			if (trimmedHeading in SPECIAL_HEADINGS) {
-				return SPECIAL_HEADINGS[(heading || '').trim()] || ''
-			}
-			return originResult
-		},
+      const trimmedHeading = (heading || '').trim()
+      if (trimmedHeading in SPECIAL_HEADINGS) {
+        return SPECIAL_HEADINGS[(heading || '').trim()] || ''
+      }
+      return originResult
+    },
     anchor: {
       permalink: true,
     },
@@ -75,12 +75,12 @@ module.exports = {
       md.use(require('markdown-it-task-lists'));
       md.use(require('markdown-it-imsize'), { autofill: true });
     }
-	},
-	extraWatchFiles: [
+  },
+  extraWatchFiles: [
     '.vuepress/nav/zh.js',
     '.vuepress/config.js',
-		'.vuepress/utils/*',
-		'zh/*'
+    '.vuepress/utils/*',
+    'zh/*'
   ],
   // 主题配置
   themeConfig: {
@@ -90,21 +90,21 @@ module.exports = {
 
     // displayAllHeaders: true,
     // sidebar,
-		locales: {
-			'/': {
-				label: '简体中文',
-				selectText: '选择语言',
-				ariaLabel: '选择语言',
-				editLinkText: '在 GitHub 上编辑此页',
-				lastUpdated: '上次更新',
-				nav: require('./nav/zh'),
-				sidebar: {
-					'/zh/guide/': [''],
-					'/zh/slate/': require('./sidebar/slate'),
-					'/zh/sharedb/': ['']
-				}
-			}
-		},
+    locales: {
+      '/': {
+        label: '简体中文',
+        selectText: '选择语言',
+        ariaLabel: '选择语言',
+        editLinkText: '在 GitHub 上编辑此页',
+        lastUpdated: '上次更新',
+        nav: require('./nav/zh'),
+        sidebar: {
+          '/zh/guide/': [''],
+          '/zh/slate/': require('./sidebar/slate'),
+          '/zh/sharedb/': ['']
+        }
+      }
+    },
 
     // polyfill IE
     evergreen: true,
@@ -114,10 +114,10 @@ module.exports = {
     searchMaxSuggestions: 10,
     // 申请
     // https://docsearch.algolia.com/apply/
-    algolia: {
-      apiKey: '3a539aab83105f01761a137c61004d85',
-      indexName: 'vuepress'
-    },
+    // algolia: {
+    //   apiKey: '3a539aab83105f01761a137c61004d85',
+    //   indexName: 'vuepress'
+    // },
 
     // PWA
     serviceWorker: true,
