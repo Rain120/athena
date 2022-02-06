@@ -70,6 +70,10 @@
 
   - 协同调度
 
+## 深入理解 slate.js
+
+https://ithelp.ithome.com.tw/users/20139359/ironman/4447
+
 ## 前端早早聊
 
 [前端搞文档 | 展新 - 钉钉文档编辑器的前世今生](https://www.yuque.com/zaotalk/posts/ftpxn7)
