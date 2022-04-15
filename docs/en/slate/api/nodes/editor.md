@@ -1,6 +1,6 @@
-# Editor
+# Editor API
 
-The `Editor` object stores all the state of a slate editor. It can be extended by plugins to add helpers and implement new behaviors.
+The `Editor` object stores all the state of a Slate editor. It can be extended by [plugins](../../concepts/08-plugins.md) to add helpers and implement new behaviors. It's a type of `Node` and its path is `[]`.
 
 ```typescript
 interface Editor {
@@ -35,8 +35,17 @@ interface Editor {
   - [Manipulation methods](editor.md#manipulation-methods)
   - [Check methods](editor.md#check-methods)
   - [Normalization methods](editor.md#normalization-methods)
+  - [Ref methods](editor.md#ref-methods)
 - [Instance methods](editor.md#instance-methods)
   - [Schema-specific methods to override](editor.md#schema-specific-instance-methods-to-override)
+  - [Element Type Methods](editor.md/#element-type-methods)
+  - [Normalize Method](editor.md/#normalize-method)
+  - [Callback Method](editor.md/#callback-method)
+  - [Mark Methods](editor.md/#mark-methods)
+  - [getFragment Method](editor.md/#getfragment-method)
+  - [Delete Methods](editor.md/#delete-methods)
+  - [Insert Methods](editor.md/#insert-methods)
+  - [Operation Handling Method](editor.md/#operation-handling-method)
 
 ## Instantiation methods
 
@@ -153,31 +162,11 @@ Get the path of a location.
 
 Options: `{depth?: number, edge?: 'start' | 'end'}`
 
-#### `Editor.pathRef(editor: Editor, path: Path, options?) => PathRef`
-
-Create a mutable ref for a `Path` object, which will stay in sync as new operations are applied to the editor.
-
-Options: `{affinity?: 'backward' | 'forward' | null}`
-
-#### `Editor.pathRefs(editor: Editor) => Set<PathRef>`
-
-Get the set of currently tracked path refs of the editor.
-
 #### `Editor.point(editor: Editor, at: Location, options?) => Point`
 
 Get the start or end point of a location.
 
 Options: `{edge?: 'start' | 'end'}`
-
-#### `Editor.pointRef(editor: Editor, point: Point, options?) => PointRef`
-
-Create a mutable ref for a `Point` object, which will stay in sync as new operations are applied to the editor.
-
-Options: `{affinity?: 'backward' | 'forward' | null}`
-
-#### `Editor.pointRefs(editor: Editor) => Set<PointRef>`
-
-Get the set of currently tracked point refs of the editor.
 
 #### `Editor.positions(editor: Editor, options?) => Generator<Point, void, undefined>`
 
@@ -209,16 +198,6 @@ Options: `{at?: Location, match?: NodeMatch, mode?: 'all' | 'highest' | 'lowest'
 #### `Editor.range(editor: Editor, at: Location, to?: Location) => Range`
 
 Get a range of a location.
-
-#### `Editor.rangeRef(editor: Editor, range: Range, options?) => RangeRef`
-
-Create a mutable ref for a `Range` object, which will stay in sync as new operations are applied to the editor.
-
-Options: `{affinity?: 'backward' | 'forward' | 'outward' | 'inward' | null}`
-
-#### `Editor.rangeRefs(editor: Editor) => Set<RangeRef>`
-
-Get the set of currently tracked range refs of the editor.
 
 #### `Editor.start(editor: Editor, at: Location) => Point`
 
@@ -268,19 +247,19 @@ Insert a block break at the current selection.
 
 #### `Editor.insertFragment(editor: Editor, fragment: Node[]) => void`
 
-Insert a fragment at the current selection.
+Inserts a fragment _at the current selection_.
 
-If the selection is currently expanded, it will be deleted first.
+If the selection is currently expanded, it will be deleted first. To atomically insert nodes (including at the very beginning or end), use [Transforms.insertNodes](../transforms.md#transformsinsertnodeseditor-editor-nodes-node--node-options).
 
 #### `Editor.insertNode(editor: Editor, node: Node) => void`
 
-Insert a node at the current selection.
+Inserts a node _at the current selection_.
 
-If the selection is currently expanded, it will be deleted first.
+If the selection is currently expanded, it will be deleted first. To atomically insert a node (including at the very beginning or end), use [Transforms.insertNodes](../transforms.md#transformsinsertnodeseditor-editor-nodes-node--node-options).
 
 #### `Editor.insertText(editor: Editor, text: string) => void`
 
-Insert text at the current selection.
+Inserts text _at the current selection_.
 
 If the selection is currently expanded, it will be deleted first.
 
@@ -294,7 +273,16 @@ If the selection is currently collapsed, the removal will be stored on `editor.m
 
 Convert a range into a non-hanging one.
 
-Options: `{voids?: boolean}`
+A "hanging" range is one created by the browser's "triple-click" selection behavior. When triple-clicking a block, the browser selects from the start of that block to the start of the _next_ block. The range thus "hangs over" into the next block. If `unhangRange` is given such a range, it moves the end backwards until it's in a non-empty text node that precedes the hanging block.
+
+Note that `unhangRange` is designed for the specific purpose of fixing triple-clicked blocks, and therefore currently has a number of caveats:
+
+- It does not modify the start of the range; only the end. For example, it does not "unhang" a selection that starts at the end of a previous block.
+- It only does anything if the start block is fully selected. For example, it does not handle ranges created by double-clicking the end of a paragraph (which browsers treat by selecting from the end of that paragraph to the start of the next).
+
+Options:
+
+- `voids?: boolean = false`: Allow placing the end of the selection in a void node.
 
 ### Check methods
 
@@ -357,8 +345,43 @@ Options: `{force?: boolean}`
 #### `Editor.withoutNormalizing(editor: Editor, fn: () => void) => void`
 
 Call a function, deferring normalization until after it completes.
+See [Normalization - Implications for Other Code](./11-normalizing.md#implications-for-other-code);
 
-## Schema-specific instance methods to override
+### Ref Methods
+
+#### `Editor.pathRef(editor: Editor, path: Path, options?) => PathRef`
+
+Create a mutable ref for a `Path` object, which will stay in sync as new operations are applied to the editor.
+
+Options: `{affinity?: 'backward' | 'forward' | null}`
+
+#### `Editor.pathRefs(editor: Editor) => Set<PathRef>`
+
+Get the set of currently tracked path refs of the editor.
+
+#### `Editor.pointRef(editor: Editor, point: Point, options?) => PointRef`
+
+Create a mutable ref for a `Point` object, which will stay in sync as new operations are applied to the editor.
+
+Options: `{affinity?: 'backward' | 'forward' | null}`
+
+#### `Editor.pointRefs(editor: Editor) => Set<PointRef>`
+
+Get the set of currently tracked point refs of the editor.
+
+#### `Editor.rangeRef(editor: Editor, range: Range, options?) => RangeRef`
+
+Create a mutable ref for a `Range` object, which will stay in sync as new operations are applied to the editor.
+
+Options: `{affinity?: 'backward' | 'forward' | 'outward' | 'inward' | null}`
+
+#### `Editor.rangeRefs(editor: Editor) => Set<RangeRef>`
+
+Get the set of currently tracked range refs of the editor.
+
+## Instance Methods
+
+### Schema-specific instance methods to override
 
 Replace these methods to modify the original behavior of the editor when building [Plugins](../../concepts/08-plugins.md). When modifying behavior, call the original method when appropriate. For example, a plugin that marks image nodes as "void":
 
@@ -439,6 +462,10 @@ Insert a fragment at the current selection. If the selection is currently expand
 #### `insertBreak() => void`
 
 Insert a block break at the current selection. If the selection is currently expanded, delete it first.
+
+#### `insertSoftBreak() => void`
+
+Insert a soft break at the current selection. If the selection is currently expanded, delete it first.
 
 #### `insertNode(node: Node) => void`
 

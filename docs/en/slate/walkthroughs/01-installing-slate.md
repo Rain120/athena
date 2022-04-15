@@ -18,7 +18,7 @@ Once you've installed Slate, you'll need to import it.
 
 ```jsx
 // Import React dependencies.
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 // Import the Slate editor factory.
 import { createEditor } from 'slate'
 
@@ -35,12 +35,12 @@ const App = () => {
 }
 ```
 
-The next step is to create a new `Editor` object. We want the editor to be stable across renders, so we use the `useMemo` hook:
+The next step is to create a new `Editor` object. We want the editor to be stable across renders, so we use the `useState` hook [without a setter](https://github.com/ianstormtaylor/slate/pull/3925#issuecomment-781179930):
 
 ```jsx
 const App = () => {
   // Create a Slate editor object that won't change across renders.
-  const editor = useMemo(() => withReact(createEditor()), [])
+  const [editor] = useState(() => withReact(createEditor()))
   return null
 }
 ```
@@ -51,7 +51,7 @@ Of course we haven't rendered anything, so you won't see any changes.
 
 ```typescript
 // TypeScript users only add this code
-import { BaseEditor } from 'slate'
+import { BaseEditor, Descendant } from 'slate'
 import { ReactEditor } from 'slate-react'
 
 type CustomElement = { type: 'paragraph'; children: CustomText[] }
@@ -66,51 +66,23 @@ declare module 'slate' {
 }
 ```
 
-```typescript
-// Also you must annotate `useState<Descendant[]>` and the editor's initial value.
-const App = () => {
-  const initialValue: CustomElement[] = []
-  const [value, setValue] = useState<Descendant[]>(initialValue)
-  return (
-    <Slate value={value} onChange={setValue}>
-      ...
-    </Slate>
-  )
-}
-```
-
-Next we want to create state for `value`:
-
-```jsx
-const App = () => {
-  const editor = useMemo(() => withReact(createEditor()), [])
-
-  // Keep track of state for the value of the editor.
-  const [value, setValue] = useState([])
-  return null
-}
-```
-
 Next up is to render a `<Slate>` context provider.
 
 The provider component keeps track of your Slate editor, its plugins, its value, its selection, and any changes that occur. It **must** be rendered above any `<Editable>` components. But it can also provide the editor state to other components like toolbars, menus, etc. using the `useSlate` hook.
 
 ```jsx
+const initialValue = []
+
 const App = () => {
-  const editor = useMemo(() => withReact(createEditor()), [])
-  const [value, setValue] = useState([])
+  const [editor] = useState(() => withReact(createEditor()))
   // Render the Slate context.
-  return (
-    <Slate
-      editor={editor}
-      value={value}
-      onChange={newValue => setValue(newValue)}
-    />
-  )
+  return <Slate editor={editor} value={initialValue} />
 }
 ```
 
-You can think of the `<Slate>` component as providing a "controlled" context to every component underneath it.
+You can think of the `<Slate>` component as providing a context to every component underneath it.
+
+> Slate Provider's "value" prop is only used as initial state for editor.children. If your code relies on replacing editor.children you should do so by replacing it directly instead of relying on the "value" prop to do this for you. See [Slate PR 4540](https://github.com/ianstormtaylor/slate/pull/4540) for a more in-depth discussion.
 
 This is a slightly different mental model than things like `<input>` or `<textarea>`, because richtext documents are more complex. You'll often want to include toolbars, or live previews, or other complex components next to your editable content.
 
@@ -119,16 +91,13 @@ By having a shared context, those other components can execute commands, query t
 Okay, so the next step is to render the `<Editable>` component itself:
 
 ```jsx
+const initialValue = []
+
 const App = () => {
-  const editor = useMemo(() => withReact(createEditor()), [])
-  const [value, setValue] = useState([])
+  const [editor] = useState(() => withReact(createEditor()))
   return (
     // Add the editable component inside the context.
-    <Slate
-      editor={editor}
-      value={value}
-      onChange={newValue => setValue(newValue)}
-    >
+    <Slate editor={editor} value={initialValue}>
       <Editable />
     </Slate>
   )
@@ -142,22 +111,19 @@ There's only one last step. So far we've been using an empty `[]` array as the i
 The value is just plain JSON. Here's one containing a single paragraph block with some text in it:
 
 ```jsx
+// Add the initial value.
+const initialValue = [
+  {
+    type: 'paragraph',
+    children: [{ text: 'A line of text in a paragraph.' }],
+  },
+]
+
 const App = () => {
-  const editor = useMemo(() => withReact(createEditor()), [])
-  // Add the initial value when setting up our state.
-  const [value, setValue] = useState([
-    {
-      type: 'paragraph',
-      children: [{ text: 'A line of text in a paragraph.' }],
-    },
-  ])
+  const [editor] = useState(() => withReact(createEditor())
 
   return (
-    <Slate
-      editor={editor}
-      value={value}
-      onChange={newValue => setValue(newValue)}
-    >
+    <Slate editor={editor} value={initialValue}>
       <Editable />
     </Slate>
   )
