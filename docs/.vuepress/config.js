@@ -76,6 +76,9 @@ module.exports = {
       md.use(require('markdown-it-imsize'), { autofill: true });
     }
   },
+  patterns: [
+    'zh/*'
+  ],
   extraWatchFiles: [
     '.vuepress/nav/zh.js',
     '.vuepress/config.js',
@@ -131,7 +134,7 @@ module.exports = {
     lastUpdated: 'Last Updated',
     repoLabel: '查看源码',
     docsDir: 'docs',
-    docsBranch: 'master',
+    docsBranch: 'main',
     editLinks: true,
     editLinkText: '帮助我们改善此页面！'
   },
