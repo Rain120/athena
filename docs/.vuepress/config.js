@@ -76,9 +76,9 @@ module.exports = {
       md.use(require('markdown-it-imsize'), { autofill: true });
     }
   },
-  patterns: [
-    'zh/*'
-  ],
+  // patterns: [
+  //   'zh/*'
+  // ],
   extraWatchFiles: [
     '.vuepress/nav/zh.js',
     '.vuepress/config.js',

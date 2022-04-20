@@ -28,13 +28,13 @@ Any issue you open must include:
 
 Here's a [JSFiddle template for Slate](https://jsfiddle.net/01pLxfzu/) to get you started:
 
-[![](../.gitbook/assets/jsfiddle.png)](https://jsfiddle.net/01pLxfzu/)
+[![](https://2612287002-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Kuki-R9UbW5PP_Bubk1-2910905616%2Fuploads%2Fgit-blob-66396f019726dbba2a0d3ac51c6646bf0d2ac7c8%2Fjsfiddle.png?alt=media)](https://jsfiddle.net/01pLxfzu/)
 
 ## Asking Questions
 
 We've also got a [Slate Slack team](https://slate-slack.herokuapp.com) where you can ask questions and get answers from other people using Slate:
 
-[![](../.gitbook/assets/slack.png)](https://slate-slack.herokuapp.com)
+[![](https://2612287002-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Kuki-R9UbW5PP_Bubk1-2910905616%2Fuploads%2Fgit-blob-716e1274ecb5f8affb0be7c427024c196195340b%2Fslack.png?alt=media)](https://slate-slack.herokuapp.com)
 
 Please use the Slack instead of asking questions in issues, since we want to reserve issues for keeping track of bugs and features. We close questions in issues so that maintaining the project isn't overwhelming.
 
