@@ -55,7 +55,7 @@ Slate 尝试通过一些原则去解决 "[Why?](#why)" 这一节提到的问题�
 - [**Plain text**](https://www.slatejs.org/examples/plaintext) — 展示最基础的例子：一个经过美化的 `<textarea>` 。
 - [**Rich text**](https://www.slatejs.org/examples/richtext) — 展示了最基础的富文本编辑器的特性。
 - [**Markdown preview**](https://www.slatejs.org/examples/markdown-preview) — 展示了对于类似于 MarkDown 的快捷键如何添加按键处理。
-- [**Links**](https://www.slatejs.org/examples/links) — 展示了如何在行内节点中将文本和关联数据进行包装。
+- [**Inlines**](https://www.slatejs.org/examples/inlines) — 展示了如何在行内节点中将文本和关联数据进行包装。
 - [**Images**](https://www.slatejs.org/examples/images) — 展示了如何使用 void （无文本）节点添加图像。
 - [**Hovering menu**](https://www.slatejs.org/examples/hovering-menu) — 展示了如何实现一个上下文相关的悬停菜单。
 - [**Tables**](https://www.slatejs.org/examples/tables) — 展示了如何通过嵌套 block 去渲染更高级的组件。
