@@ -34,7 +34,7 @@ const App = () => {
 
 现在让我们添加“代码块”到我们的编辑器中。
 
-问题是，代码块不仅仅要渲染为一个普通的段落，它还需要以不同的方式渲染出来。为了做到这一点，我们需要为 `code` 元素节点定义 `render`。
+问题是，代码块不仅仅要渲染为一个普通的段落，它还需要以不同的方式渲染出来。为了做到这一点，我们需要为 `code` 元素节点定义“渲染器”。
 
 元素渲染器仅仅是一个简单的 `React` 组件。像是这样:
 
@@ -90,7 +90,7 @@ const App = () => {
   return (
     <Slate editor={editor} value={initialValue}>
       <Editable
-        // Pass in the `renderElement` function.
+        // 在 `renderElement` 函数中传递。
         renderElement={renderElement}
         onKeyDown={event => {
           if (event.key === '&') {
@@ -119,7 +119,7 @@ const DefaultElement = props => {
 好了，但是我们还需要一个办法让用户实际转换块（block）为代码块。所以让我们修改 `onKeyDown` 函数，添加一个 <kbd>ctrl</kbd> `+` <kbd>-</kbd>快捷键来做这件事：
 
 ```jsx
-// 从 Slate 中导入 `Editor` and `Transforms`
+// 从 Slate 中导入 `Editor` 和 `Transforms`
 import { Editor, Transforms } from 'slate'
 
 const initialValue = [
@@ -177,7 +177,7 @@ const DefaultElement = props => {
 
 现在，如果你按下 <kbd>ctrl</kbd> `+` <kbd>-</kbd> ，你光标所在的块应该会转换为一个代码块！多么神奇！
 
-但是我们忘记了一件事。当我们再次按下  <kbd>ctrl</kbd> `+` <kbd>-</kbd> ，它应该从代码块变回普通段落。为了做到这点，我们需要添加一点点逻辑，基于我们当前选择的块是否已经是一个代码块来改变我们设置的类型::
+但是我们忘记了一件事。当我们再次按下  <kbd>ctrl</kbd> `+` <kbd>-</kbd> ，它应该从代码块变回普通段落。为了做到这点，我们需要添加一点点逻辑，基于我们当前选择的块是否已经是一个代码块来改变我们设置的类型：
 
 ```jsx
 const initialValue = [
