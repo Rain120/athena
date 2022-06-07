@@ -49,7 +49,7 @@ const App = () => {
 }
 ```
 
-现在，我们编辑 `onKeyDown` 处理程序，当你按下 <kbd>ctrl - B</kbd> 时，它会添加一个**粗体**格式到你所选择的文本上:
+现在，我们编辑 `onKeyDown` 处理程序，当你按下 <kbd>ctrl - B</kbd> 时，它会添加一个**粗体**格式到你所选择的文本上：
 
 ```jsx
 const initialValue = [
@@ -157,7 +157,7 @@ const App = () => {
     }
   }, [])
 
-  // 定义一个叶子渲染函数， 使用 `useCallback` 记住。
+  // 定义一个叶子渲染函数，使用 `useCallback` 记住。
   const renderLeaf = useCallback(props => {
     return <Leaf {...props} />
   }, [])
