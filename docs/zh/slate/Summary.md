@@ -7,7 +7,7 @@
 - [安装 Slate](./walkthroughs/01-installing-slate.md)
 - [添加事件处理器](./walkthroughs/02-adding-event-handlers.md)
 - [定义自定义元素](./walkthroughs/03-defining-custom-elements.md)
-- [自定义样式](./walkthroughs/04-applying-custom-formatting.md)
+- [应用自定义样式](./walkthroughs/04-applying-custom-formatting.md)
 - [执行命令](./walkthroughs/05-executing-commands.md)
 - [保存到数据库](./walkthroughs/06-saving-to-a-database.md)
 - [使用 script 标签引入](./walkthroughs/XX-using-the-bundled-source.md)
