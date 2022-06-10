@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "77bd073c7b552b7f00b146835f301070"
+    "revision": "ed91b1dccb201c962477091741cbce95"
   },
   {
     "url": "assets/css/0.styles.bbab9b24.css",
@@ -98,16 +98,16 @@ self.__precacheManifest = [
     "revision": "ee4ea67e49d58d09d95c5badf312b7bc"
   },
   {
-    "url": "assets/js/105.200b298e.js",
-    "revision": "87da34d0177d456f256ea1351d558530"
+    "url": "assets/js/105.2e7220f6.js",
+    "revision": "4419244797c5f2cb46986d0bc02efb9a"
   },
   {
-    "url": "assets/js/106.3d869a48.js",
-    "revision": "b5ea17bc9c346ea1c258afca2bebd4f1"
+    "url": "assets/js/106.c87eb8f7.js",
+    "revision": "a841dbe8feea7be0d939f80dcaa08d45"
   },
   {
-    "url": "assets/js/107.61bacded.js",
-    "revision": "7857561eaee44a25d44fa5f5f179f0c4"
+    "url": "assets/js/107.e9e6fb9f.js",
+    "revision": "ef88b07d4d1021b3a5ff31af9aabb8a2"
   },
   {
     "url": "assets/js/108.a740891a.js",
@@ -418,8 +418,8 @@ self.__precacheManifest = [
     "revision": "92571cd95f30ea5d164e669a6f5af185"
   },
   {
-    "url": "assets/js/78.d95766ab.js",
-    "revision": "bf98af3822a5a6d594294c6e46526817"
+    "url": "assets/js/78.3d0926b2.js",
+    "revision": "56520ca335df62d4679f751b6f71c7cd"
   },
   {
     "url": "assets/js/79.56b7d0ef.js",
@@ -514,256 +514,256 @@ self.__precacheManifest = [
     "revision": "b298c226999329368dc9f0fa85667b28"
   },
   {
-    "url": "assets/js/app.b4381640.js",
-    "revision": "09b709fdede741c11eddbc15e3339e1e"
+    "url": "assets/js/app.b5043dc2.js",
+    "revision": "c211f6e4116954e963b5b61ee8ca1a23"
   },
   {
     "url": "en/slate/api/locations/index.html",
-    "revision": "551140a3f3ddb4a1d1c4636ccac68dd7"
+    "revision": "d2c2e241762a0197334be8d636101a50"
   },
   {
     "url": "en/slate/api/locations/location.html",
-    "revision": "e20a79347f8a4ccd4f85b7a702ed0773"
+    "revision": "a631eb56e61995144b63bdac770f5fd9"
   },
   {
     "url": "en/slate/api/locations/path-ref.html",
-    "revision": "2cc685d01a0947fee1a9de928a077c2c"
+    "revision": "c4baab5ba670ad25dda49ab52b8e1d8c"
   },
   {
     "url": "en/slate/api/locations/path.html",
-    "revision": "4262a68a28652c83f620c570ef454351"
+    "revision": "eae0bc5c441158b3626753cedb7bfcaa"
   },
   {
     "url": "en/slate/api/locations/point-entry.html",
-    "revision": "d83c9719cd22640efe419714552ba0df"
+    "revision": "adb648dee70d1c3f258a9ed51849e0f3"
   },
   {
     "url": "en/slate/api/locations/point-ref.html",
-    "revision": "5da507cb33e8589bf59e4b3142a4ecec"
+    "revision": "0524e4f38caedd230337aebb5609b900"
   },
   {
     "url": "en/slate/api/locations/point.html",
-    "revision": "c4da0768b8b6a767bf01e67ca25b3a7a"
+    "revision": "bcd890fbb6d7f72346d2f6ab1b273c3b"
   },
   {
     "url": "en/slate/api/locations/range-ref.html",
-    "revision": "f9e5a1186a2815e91937908ee1056566"
+    "revision": "34c700f861201f2f6850e04423d8a509"
   },
   {
     "url": "en/slate/api/locations/range.html",
-    "revision": "d1c555bf99ba75e698b9304eed44c9d9"
+    "revision": "4234289a1648998be0e121c6801de8a8"
   },
   {
     "url": "en/slate/api/locations/span.html",
-    "revision": "7790a029a667de090413688f500afd59"
+    "revision": "95d6ddd42d2cfdaa59e8648068b17de5"
   },
   {
     "url": "en/slate/api/nodes/editor.html",
-    "revision": "6a9d3bedb7610d75155d29cd6d0d551d"
+    "revision": "73f3c82450beb61edd740f9d852974f9"
   },
   {
     "url": "en/slate/api/nodes/element.html",
-    "revision": "283af3eae1fbf375319de0cfe70ab659"
+    "revision": "a393ce584551c7392be9eb57c47b30b8"
   },
   {
     "url": "en/slate/api/nodes/index.html",
-    "revision": "290bed51bdf24b7d25db6620beafa32e"
+    "revision": "6cb6060eb62af2fd3eba5b10338ab1f0"
   },
   {
     "url": "en/slate/api/nodes/node-entry.html",
-    "revision": "2e148d7f7d70fa4284366fd9b5444854"
+    "revision": "641c8269b1bfa96cd86728b438b2b4d4"
   },
   {
     "url": "en/slate/api/nodes/node.html",
-    "revision": "203f9ce2fe7ccb0f03464659a65af998"
+    "revision": "30b9831ab0e4bc3470629a0b994a9482"
   },
   {
     "url": "en/slate/api/nodes/text.html",
-    "revision": "a5ab5429e4fc263506fb1683bd5143e9"
+    "revision": "2303a696d3804008d96bb778dce36ec6"
   },
   {
     "url": "en/slate/api/operation.html",
-    "revision": "d2f91f0774ff689f38523bcf246bb410"
+    "revision": "ade280d0928578b98247d40979bb44dc"
   },
   {
     "url": "en/slate/api/transforms.html",
-    "revision": "65ead8f82b1d873f8e34ba553826d059"
+    "revision": "fb6708ce11a91a412ad5a2e4619c6d95"
   },
   {
     "url": "en/slate/concepts/01-interfaces.html",
-    "revision": "ad0a933e66c979551e2622b7f39fe562"
+    "revision": "0e2405cebba1e9acb367b2a5dbf696e5"
   },
   {
     "url": "en/slate/concepts/02-nodes.html",
-    "revision": "272f42d02b3650b69f938881b93b0374"
+    "revision": "7d72ef829ca2856a77a66522b4bccd2b"
   },
   {
     "url": "en/slate/concepts/03-locations.html",
-    "revision": "00520df14555c2416a2ae40aa1a57b12"
+    "revision": "0b7717c4d2b11b83973a6cd2a4869f90"
   },
   {
     "url": "en/slate/concepts/04-transforms.html",
-    "revision": "7711b62c1465ac5c94b14f5f8dee3dbb"
+    "revision": "c182084c59d2e36bda7d33f73dc2acda"
   },
   {
     "url": "en/slate/concepts/05-operations.html",
-    "revision": "4df566983169be308ce8fa103e6044a1"
+    "revision": "a5050de8c491985c21e2074728b00aea"
   },
   {
     "url": "en/slate/concepts/06-commands.html",
-    "revision": "15fbc724b35755630656cb5e951eafec"
+    "revision": "3a68641765d95baf8770630da40481a8"
   },
   {
     "url": "en/slate/concepts/07-editor.html",
-    "revision": "afad2e02e8c34cf2bf1dc31cb7dcd1d8"
+    "revision": "b4278e9df9aaa850151f9b1459c8c8df"
   },
   {
     "url": "en/slate/concepts/08-plugins.html",
-    "revision": "f32f78ce9dffd51df321bc8c36216fa4"
+    "revision": "36fa507b65f9807d233fca8dbd1812f2"
   },
   {
     "url": "en/slate/concepts/09-rendering.html",
-    "revision": "9d8ace2c58180651db17a2124a3797a8"
+    "revision": "8d71e0096928f44d14ff633709d11fa1"
   },
   {
     "url": "en/slate/concepts/10-serializing.html",
-    "revision": "ecab5321de65df2ee96391327b789600"
+    "revision": "06d9791f08205de60915ce38a07af283"
   },
   {
     "url": "en/slate/concepts/11-normalizing.html",
-    "revision": "3c942620b5d8882589b8072a60fc32ae"
+    "revision": "2c678485c59925aae231a5875eaf92da"
   },
   {
     "url": "en/slate/concepts/12-typescript.html",
-    "revision": "f73657ec1a861c0b9ef3479442825eb9"
+    "revision": "4b1381ea4d2800fa69f3cc9cdf7dcfdc"
   },
   {
     "url": "en/slate/concepts/XX-migrating.html",
-    "revision": "02f4e5a1aa2a1f2776b49ee49fa58c9d"
+    "revision": "71c13c9e487a8be859b6e1b350b650a8"
   },
   {
     "url": "en/slate/general/changelog.html",
-    "revision": "576c2afda992815347f3f6b4db925f55"
+    "revision": "f5100901ca0f1d02dfb968ffcf8253b8"
   },
   {
     "url": "en/slate/general/contributing.html",
-    "revision": "4e33d3d219379de1593788d81234dcd3"
+    "revision": "303f080fa2230933742f473e1721fa55"
   },
   {
     "url": "en/slate/general/faq.html",
-    "revision": "a9e4d188088205030418eb236a56eec5"
+    "revision": "606b98c2f303e40dde4df825f2672199"
   },
   {
     "url": "en/slate/general/resources.html",
-    "revision": "6545690aa00548fba285d26eb412dc49"
+    "revision": "aea188580f7c67554cd868e5feaaf4e8"
   },
   {
     "url": "en/slate/Introduction.html",
-    "revision": "088860cab2de8520af968f2d1d24c5f8"
+    "revision": "446c7b2ece8dbf34815830e041caf542"
   },
   {
     "url": "en/slate/libraries/slate-history.html",
-    "revision": "8672ee457545bfa6875eaaed358f60b6"
+    "revision": "1e96de63ee86efab65c88c9b3aef850e"
   },
   {
     "url": "en/slate/libraries/slate-hyperscript.html",
-    "revision": "0a5f5bfdd0a083d39c8dd1fe7b28f1f6"
+    "revision": "5c917425438d9638a79a430cff103f20"
   },
   {
     "url": "en/slate/libraries/slate-react.html",
-    "revision": "7bde9d6a582d1557e1478ed9c353c480"
+    "revision": "a504622de500ef92cdb739f3f94c5683"
   },
   {
     "url": "en/slate/locations/index.html",
-    "revision": "605d1284ca174064774a185578419e4e"
+    "revision": "046bfe8234caf2bda458b5d03da90b7f"
   },
   {
     "url": "en/slate/locations/location.html",
-    "revision": "de5e815df81b63167e2841917135cddf"
+    "revision": "81a92b6c53d690e5e33cc627d0ab8deb"
   },
   {
     "url": "en/slate/locations/path.html",
-    "revision": "c5dc1a48a011058c6104e65107da0772"
+    "revision": "5f41ea40b5b85203a7b62e037b126c14"
   },
   {
     "url": "en/slate/locations/point-entry.html",
-    "revision": "346374b285de7c4af8565a720f72fd75"
+    "revision": "65fe59672b9a0480b30fe00269f08d19"
   },
   {
     "url": "en/slate/locations/point-ref.html",
-    "revision": "31092c2a79bb8a463d341eebf2a15557"
+    "revision": "ffd573a5a09b0a56ec2789fc69485591"
   },
   {
     "url": "en/slate/locations/point.html",
-    "revision": "764d4037a8681652240a410c3dcee25f"
+    "revision": "768558aad18b98e7ce53aab0332e7c1b"
   },
   {
     "url": "en/slate/locations/range-ref.html",
-    "revision": "3d77589a99ffe30934973401d736b6a3"
+    "revision": "ba7eb87d57fb7e9b71ae54e148f0b477"
   },
   {
     "url": "en/slate/locations/range.html",
-    "revision": "87fd8142b366954cfa44b75aab119e2f"
+    "revision": "0ec0e80c31a90f43fabb0a13dcee71a5"
   },
   {
     "url": "en/slate/locations/span.html",
-    "revision": "50069fba862dca48a2d2e0b852480021"
+    "revision": "c4370af5701c9c4c7500c7870729c37d"
   },
   {
     "url": "en/slate/nodes/editor.html",
-    "revision": "3c23b05d67619e058e997bc3f3e39145"
+    "revision": "91854579f03d20177ad4ca4e0743c0b4"
   },
   {
     "url": "en/slate/nodes/element.html",
-    "revision": "0b0f6976ac0a58f3f3356f689906c6fd"
+    "revision": "526fba59bd572dc89d6c0448d8ed6f9c"
   },
   {
     "url": "en/slate/nodes/index.html",
-    "revision": "95612937d1ee1adc2297c3086f945631"
+    "revision": "2d7c48d0468ef0dd9d8a287a6306d6fc"
   },
   {
     "url": "en/slate/nodes/node-entry.html",
-    "revision": "6c201bb85ce320a1b4ae3f40bef20315"
+    "revision": "c5efc1c39e91bd7dee7cb313ec971e64"
   },
   {
     "url": "en/slate/nodes/node.html",
-    "revision": "c8485e06490cca95471189569ccc364d"
+    "revision": "40df26db980feeda62c82d5550ccd6ba"
   },
   {
     "url": "en/slate/nodes/text.html",
-    "revision": "f1451d88b492439547aa8f4a6c5e20be"
+    "revision": "5e39357b7abc09d27d16b2c8ce592a1a"
   },
   {
     "url": "en/slate/Summary.html",
-    "revision": "288e632ef53d37b9a366f0c694037a31"
+    "revision": "2422b3d9dc024cf1cc707ea6fe2441f7"
   },
   {
     "url": "en/slate/walkthroughs/01-installing-slate.html",
-    "revision": "1b0e92fc376f8c44db2f4014ae4d3bb2"
+    "revision": "82d7f43ce62fb3ed1549b0f87e418b38"
   },
   {
     "url": "en/slate/walkthroughs/02-adding-event-handlers.html",
-    "revision": "5e20379363e151b3d3de36280f7f4c64"
+    "revision": "8f32f060ee3722c3fadee24c671d7820"
   },
   {
     "url": "en/slate/walkthroughs/03-defining-custom-elements.html",
-    "revision": "2eadc0d54af876db47be63b4e4bfb0ad"
+    "revision": "0256fe291c119085815b11414d1135f0"
   },
   {
     "url": "en/slate/walkthroughs/04-applying-custom-formatting.html",
-    "revision": "ba4d9fabb4e35e0e9628b6e3a7ac4059"
+    "revision": "44ecd5c546bc4551060e9f117b673dda"
   },
   {
     "url": "en/slate/walkthroughs/05-executing-commands.html",
-    "revision": "a64ffbcc8bb7d9ed3195005b0fcef716"
+    "revision": "a40d01b648821975fb44dd54a235d682"
   },
   {
     "url": "en/slate/walkthroughs/06-saving-to-a-database.html",
-    "revision": "3bee0d0d2b405a0168d13053692decf9"
+    "revision": "1ef06ed74f982348e96b75c8817e0393"
   },
   {
     "url": "en/slate/walkthroughs/XX-using-the-bundled-source.html",
-    "revision": "82e6c4223d4d5d4210dd90273f7c2464"
+    "revision": "2384a40e5a774533ef73233923a3c7f8"
   },
   {
     "url": "images/docs.png",
@@ -803,7 +803,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "6094f10adde4857e1e88e42b190d5b39"
+    "revision": "808dd0506abccdb3aa4341fc3622b814"
   },
   {
     "url": "logo.png",
@@ -811,159 +811,159 @@ self.__precacheManifest = [
   },
   {
     "url": "zh/guide/index.html",
-    "revision": "5b18cb720776c403c0db4690b8f5bdb9"
+    "revision": "90096a5a18703f943f4cf1b3c296e1eb"
   },
   {
     "url": "zh/slate/api/locations.html",
-    "revision": "2563e6bad6bd4f7f926e5a506c2f8306"
+    "revision": "3886f510ffec0b43a5f6a68d56a763ac"
   },
   {
     "url": "zh/slate/api/miscellaneous.html",
-    "revision": "9b112fe3d62905aeeb7fccc8c1dd0b38"
+    "revision": "d25bb8fdccc39d32d1d426024bc3dcb3"
   },
   {
     "url": "zh/slate/api/nodes.html",
-    "revision": "2c0ab49812693521e63eddab964cebc7"
+    "revision": "16c4ffaf67ad1aa90f7886d27a91ccc6"
   },
   {
     "url": "zh/slate/api/refs.html",
-    "revision": "28111f52a982f35348b0b2c279c76c16"
+    "revision": "6cdd5076daab4fe3bb1792d7385af513"
   },
   {
     "url": "zh/slate/api/transforms.html",
-    "revision": "5eba6342097f686105810088aa6d5221"
+    "revision": "cb8a56d4f15b67e35b8bd9d67dc9484a"
   },
   {
     "url": "zh/slate/concepts/01-interfaces.html",
-    "revision": "79398f198c20a1923f55056696b58008"
+    "revision": "a4870d7c67894378313dc56e51ae56c4"
   },
   {
     "url": "zh/slate/concepts/02-nodes.html",
-    "revision": "080a473858ca62c91f37959b78839a0d"
+    "revision": "3cb4badc0b48abc74da7698980a5c0f2"
   },
   {
     "url": "zh/slate/concepts/03-locations.html",
-    "revision": "1661ee8a47afaf0ab22c8efc711a5005"
+    "revision": "28a02738ae7cea90d6dfb08f5bcdfac1"
   },
   {
     "url": "zh/slate/concepts/04-commands.html",
-    "revision": "277f5554a0d675c51f604d3845227c38"
+    "revision": "5f8d2fd10d28082cf88d57ff8b6e600f"
   },
   {
     "url": "zh/slate/concepts/04-transforms.html",
-    "revision": "b255524f8d71fd6b66195ddeb04c7907"
+    "revision": "95482717f2956a2077da9b6e0d3db1df"
   },
   {
     "url": "zh/slate/concepts/05-operations.html",
-    "revision": "2c9ebeae1bcd3dd7853f4fe1fb2ea414"
+    "revision": "d48806498508ec142b342599e40f8a20"
   },
   {
     "url": "zh/slate/concepts/06-editor.html",
-    "revision": "d450b13c52132803936c577528cdf08b"
+    "revision": "dd774b0f487e7c11b4c1f39ab3124cc0"
   },
   {
     "url": "zh/slate/concepts/07-plugins.html",
-    "revision": "67ceed3f0d540d511b7d83e08cc64481"
+    "revision": "861165806fac6a1bab2818ad3e32a12f"
   },
   {
     "url": "zh/slate/concepts/08-rendering.html",
-    "revision": "dd89508429148c9029ff557cceca17da"
+    "revision": "0dfbfddbc296ca1d41d84f437f7ecceb"
   },
   {
     "url": "zh/slate/concepts/09-serializing.html",
-    "revision": "ea0b8972cda76fa1b2dee88ecc99c897"
+    "revision": "e7699fad68b4fd5a2988a12ef30a5137"
   },
   {
     "url": "zh/slate/concepts/10-normalizing.html",
-    "revision": "876d180cd3a74c7f44989553db13a16f"
+    "revision": "e95966d6af61d0eba8f7e9e256a34fe8"
   },
   {
     "url": "zh/slate/concepts/XX-migrating.html",
-    "revision": "30823e112f4d93b8fbba73ca8853a7d1"
+    "revision": "f76de680442e24a5bfb1ee549f05eaa5"
   },
   {
     "url": "zh/slate/Contributing.html",
-    "revision": "6e4710d3b57a94eb9d5c245285386f6b"
+    "revision": "8394bbdc9953a4dd98ef92940cadfea8"
   },
   {
     "url": "zh/slate/general/faq.html",
-    "revision": "f7bd497ab3d57f173f9583c2b9d44cec"
+    "revision": "d9fdb0e6c7632d678586f416e641d245"
   },
   {
     "url": "zh/slate/general/resources.html",
-    "revision": "8edbe6b4ee34e2bb484b8ab841f59918"
+    "revision": "5ab2d05c9977dc4b540b7985e4f67549"
   },
   {
     "url": "zh/slate/Introduction.html",
-    "revision": "fa0923a443f63d9d9fc1f73072ccb7be"
+    "revision": "e52e8801624699608921f93972b2aa3e"
   },
   {
     "url": "zh/slate/libraries/slate-history.html",
-    "revision": "3acdadf59d6cb240b88395eefc259926"
+    "revision": "c184a4538ab0e9ce91207fce285cac58"
   },
   {
     "url": "zh/slate/libraries/slate-hyperscript.html",
-    "revision": "7ecd5d9a14451ab74e4090475b5cf865"
+    "revision": "57371c3c53774d5b76c38535ac0aca2d"
   },
   {
     "url": "zh/slate/libraries/slate-react.html",
-    "revision": "067efff85c0b4dc5c2084ed9e9e35201"
+    "revision": "f370cd2cf6dc6812fd319a0ef0a0034f"
   },
   {
     "url": "zh/slate/note/blog.html",
-    "revision": "81e75679d504f1936ab8546862be9864"
+    "revision": "43f894cfff69b4c5060ff1eac621a8cb"
   },
   {
     "url": "zh/slate/note/design-mind.html",
-    "revision": "624218d28b9cabfda5f273baf72b9b8a"
+    "revision": "db679d9e6868d7e511f1b653bbadd9b7"
   },
   {
     "url": "zh/slate/note/plugins.html",
-    "revision": "9ec7cf50844a53d9b506b4b6484ee2bd"
+    "revision": "061f7c5a93c699b3daca7b180970a9a6"
   },
   {
     "url": "zh/slate/note/schema.html",
-    "revision": "4f774b928cb50c04abb4f6c2ffea88c7"
+    "revision": "c58a9ffbf5be7b8f7cc8de6682684363"
   },
   {
     "url": "zh/slate/note/selection-range.html",
-    "revision": "2c50f9e71a0d8b11467767d1bdd2c285"
+    "revision": "e5b4e5d600d04b7d33f281a20a9da35a"
   },
   {
     "url": "zh/slate/SlateStart.html",
-    "revision": "53f90f82bc188ef689422b8a207e250e"
+    "revision": "a57b155c2e580a4e6a66696bf59cd73f"
   },
   {
     "url": "zh/slate/Summary.html",
-    "revision": "cba1af221ee2be0b17544c9612d05fc2"
+    "revision": "f014f7ee44c40209a6bf3698adb1a19e"
   },
   {
     "url": "zh/slate/walkthroughs/01-installing-slate.html",
-    "revision": "2e4cc31993ea42b47acbb7e94cc42943"
+    "revision": "0fc9a395cd5cc84980f1ccefe43154a1"
   },
   {
     "url": "zh/slate/walkthroughs/02-adding-event-handlers.html",
-    "revision": "b48fa9fb2c1fca6cfa7f7e92833783cd"
+    "revision": "7888824b46547df2bcc19e9a4d5a775f"
   },
   {
     "url": "zh/slate/walkthroughs/03-defining-custom-elements.html",
-    "revision": "a023f1c9d537a94e865a6a1ba1f0106f"
+    "revision": "0965e7554bb790321ef909b1c9654c92"
   },
   {
     "url": "zh/slate/walkthroughs/04-applying-custom-formatting.html",
-    "revision": "a3cefbad5bfd3288afd5a1634467de56"
+    "revision": "55d9e8c3b5a1fcf2fd95161a7ca1d813"
   },
   {
     "url": "zh/slate/walkthroughs/05-executing-commands.html",
-    "revision": "edb435e6c3f8b51e62b74f106cf7f1ad"
+    "revision": "46a180e8db6d53689373b24b990db420"
   },
   {
     "url": "zh/slate/walkthroughs/06-saving-to-a-database.html",
-    "revision": "d7147db72ece42e8d44056284f30b0c6"
+    "revision": "bfa3a51c9e5a9027e89931517d83cea8"
   },
   {
     "url": "zh/slate/walkthroughs/XX-using-the-bundled-source.html",
-    "revision": "c557210ef18ef259f1d169237725fdf4"
+    "revision": "2d6b678d8d551b8e079272309763334f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
