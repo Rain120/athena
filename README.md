@@ -15,7 +15,7 @@
 
 </div>
 
-## 😚 Welcome
+## 😚 Welcom
 
 Welcome to Here for the Chinese documentation.
 
