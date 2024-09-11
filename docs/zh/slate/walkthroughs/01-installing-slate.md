@@ -76,7 +76,7 @@ const initialValue = []
 const App = () => {
   const [editor] = useState(() => withReact(createEditor()))
   // 渲染 Slate 上下文。
-  return <Slate editor={editor} value={initialValue} />
+  return <Slate editor={editor} initialValue={initialValue} />
 }
 ```
 
@@ -97,7 +97,7 @@ const App = () => {
   const [editor] = useState(() => withReact(createEditor()))
   return (
     // 在上下文中添加一个可编辑的组件。
-    <Slate editor={editor} value={initialValue}>
+    <Slate editor={editor} initialValue={initialValue}>
       <Editable />
     </Slate>
   )
@@ -123,7 +123,7 @@ const App = () => {
   const [editor] = useState(() => withReact(createEditor()))
 
   return (
-    <Slate editor={editor} value={initialValue}>
+    <Slate editor={editor} initialValue={initialValue}>
       <Editable />
     </Slate>
   )
